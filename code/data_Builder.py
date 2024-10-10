@@ -11,9 +11,9 @@ from tqdm import tqdm
 from prompt import QuestionPrompt, AnswerPrompt,EvaluatePrompt
 
 #初始化API
-api_key = "sk-rPuX_cf1mM8Df4qFNadMucBw22Z8aayL-IAobSKjozT3BlbkFJ-iwRq_-C8bZP2CmIA9Psqb6m1QPsYTnz5eJEu_rLEA"
-organization = "org-sGcdHuDO64yNd18z2C65ykxE"
-client=OpenAI(api_key= "sk-rPuX_cf1mM8Df4qFNadMucBw22Z8aayL-IAobSKjozT3BlbkFJ-iwRq_-C8bZP2CmIA9Psqb6m1QPsYTnz5eJEu_rLEA",organization="org-sGcdHuDO64yNd18z2C65ykxE")
+api_key = ""
+organization = ""
+client=OpenAI(api_key= "",organization="")
 
 
 """

@@ -29,9 +29,9 @@ from pptx.util import Inches
 from pycocotools.coco import COCO
 from tqdm import tqdm
 import win32com.client
-api_key = "sk-rPuX_cf1mM8Df4qFNadMucBw22Z8aayL-IAobSKjozT3BlbkFJ-iwRq_-C8bZP2CmIA9Psqb6m1QPsYTnz5eJEu_rLEA"
-organization = "org-sGcdHuDO64yNd18z2C65ykxE"
-client=OpenAI(api_key= "sk-rPuX_cf1mM8Df4qFNadMucBw22Z8aayL-IAobSKjozT3BlbkFJ-iwRq_-C8bZP2CmIA9Psqb6m1QPsYTnz5eJEu_rLEA",organization="org-sGcdHuDO64yNd18z2C65ykxE")
+api_key = ""
+organization = ""
+client=OpenAI(api_key= "",organization="")
 
 system_prompt = """You are an advanced AI assistant specialized in analyzing and interpreting images. Your task is to provide detailed and insightful descriptions of the images presented to you. Follow these guidelines:
 
