@@ -1,0 +1,711 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>相关参考文献</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="10c7ae07-0b5a-80df-8922-dbfc59e6e6ae" class="page sans"><header><h1 class="page-title">相关参考文献</h1><p class="page-description"></p></header><div class="page-body"><p id="10c7ae07-0b5a-802c-ae14-ddb921e86bcc" class="">
+</p><p id="10c7ae07-0b5a-80f9-b8a7-c6da30bd57ac" class="">高亮文本为重要的benchmark</p><h1 id="10c7ae07-0b5a-808d-a8cd-d432ebc11d51" class="">相关Benchmark和<mark class="highlight-default">Instruction-Tuning</mark> dataset：</h1><p id="10d7ae07-0b5a-800d-ae35-d822457350ad" class=""><a href="https://arxiv.org/abs/2406.12742">https://arxiv.org/abs/2406.12742</a></p><h2 id="10c7ae07-0b5a-80e8-a1b3-f5465e09f9d5" class="">Benchmarking Multi-Image Understanding in Vision and Language Models: Perception, Knowledge, Reasoning, and Multi-Hop Reasoning</h2><p id="10d7ae07-0b5a-802c-8e23-d3838678c81c" class="">比较不重要</p><p id="10d7ae07-0b5a-8089-bbcc-dc36df674d16" class="">
+</p><p id="10d7ae07-0b5a-8086-adba-ec51a1b5137a" class="">
+</p><p id="10c7ae07-0b5a-803d-a242-feaacf0a259a" class="">
+</p><h2 id="10c7ae07-0b5a-80df-8630-c126ebdd7ebd" class=""><mark class="highlight-red">MUIRBENCH</mark>: A Comprehensive Benchmark for Robust Multi-image Understanding</h2><p id="10d7ae07-0b5a-802f-8c11-f389630fa214" class=""><a href="https://arxiv.org/abs/2406.09411">https://arxiv.org/abs/2406.09411</a></p><p id="10c7ae07-0b5a-8054-8522-d1e97e1fa69e" class="">多图多选题数据集，多图来源于各个benchmark与现有数据集，通过改造单选题或者人工设计，人工标注，值得注意的是<mark class="highlight-yellow">添加了无正确选项的题</mark></p><p id="10c7ae07-0b5a-803c-842f-e3bca0d07875" class="">
+</p><p id="10c7ae07-0b5a-8078-96c4-d7c2bad249a8" class="">其多图间关系如下：</p><ol type="1" id="10c7ae07-0b5a-804c-aa48-e4cbe7c37fc2" class="numbered-list" start="1"><li>时间关系：图像在时间上相关，展示一段时间内的进展或变化。例如时间间隔摄影或视频中的连续帧。</li></ol><ol type="1" id="10c7ae07-0b5a-80b4-8335-c2e0db36a879" class="numbered-list" start="2"><li>有序页面：图像是序列的一部分，例如书籍中的页面或演示文稿中的幻灯片，其中顺序传达着含义。</li></ol><ol type="1" id="10c7ae07-0b5a-80f5-84ac-d3c12cf5cab3" class="numbered-list" start="3"><li>互补关系：当一起查看时，图像提供额外信息或背景，增强了对主题的理解。它们通过填补空白或提供不同视角来互补彼此。</li></ol><ol type="1" id="10c7ae07-0b5a-80d8-a34f-df1d95d7fab3" class="numbered-list" start="4"><li>裁剪/放大图像：一幅图像是另一幅图像的放大或裁剪版本，侧重于原始图像的特定部分以突出细节。</li></ol><ol type="1" id="10c7ae07-0b5a-8058-9e7b-f80000048dc1" class="numbered-list" start="5"><li>叙事性：一系列图像共同讲述故事或传达一系列事件，类似于连环画或分镜头。</li></ol><ol type="1" id="10c7ae07-0b5a-80d7-a97a-c367b2b27d27" class="numbered-list" start="6"><li>场景多视角：同一场景的多幅图像从不同角度或视角拍摄，提供对场景更全面的视图。</li></ol><ol type="1" id="10c7ae07-0b5a-8019-ad17-d8074ebf249a" class="numbered-list" start="7"><li>物体多视角：从各种角度或视角拍摄的同一物体的图像，有助于理解物体的三维形状。</li></ol><ol type="1" id="10c7ae07-0b5a-80f8-a459-eb8ec7cd0776" class="numbered-list" start="8"><li>整体相似性：内容、风格或主题方面一般相似的图像，但不一定相同。它们可能共享共同主题或视觉元素。</li></ol><ol type="1" id="10c7ae07-0b5a-80cd-bef4-fc7e4a4ae35b" class="numbered-list" start="9"><li>部分相似性：共享一些但不是全部元素的图像。它们可能具有重叠的特征或主题，但也包含明显的差异。</li></ol><ol type="1" id="10c7ae07-0b5a-80c6-a385-f6fb603da6bd" class="numbered-list" start="10"><li>独立图像：彼此之间没有明确关系的图像。它们不是通过时间、序列、上下文或内容相连接。</li></ol><p id="10c7ae07-0b5a-8013-91e3-c7fba06ee316" class="">
+</p><p id="10c7ae07-0b5a-80de-ab2f-ca2a7b1173a4" class="">
+</p><p id="10c7ae07-0b5a-80ad-8bda-ca6294340a43" class="">
+</p><h2 id="10c7ae07-0b5a-80e8-b9eb-da4d1468ea35" class=""><mark class="highlight-red">MMDU:</mark><mark class="highlight-default"> </mark><mark class="highlight-yellow">A Multi-Turn Multi-Image Dialog Understanding Benchmark and Instruction-Tuning Dataset for LVLMs</mark></h2><p id="10d7ae07-0b5a-808a-8aa2-fecb55e2c120" class=""><a href="https://arxiv.org/abs/2406.11833">https://arxiv.org/abs/2406.11833</a></p><p id="10c7ae07-0b5a-8011-92c2-d5b1e0e7e503" class=""><strong>提出了微调指令集：MMDU-45k（规模45k），</strong>以及benchmark</p><p id="10c7ae07-0b5a-8030-bf57-d2078ef9b834" class="">多图多轮长对话数据集，数据来源于WIKI中的图像以及对应文本，使用sentence transformer提取文本特征，并进行聚类，将图片分组2 到 20 张；</p><p id="10d7ae07-0b5a-808e-8ee9-e098f313f5f8" class="">
+</p><p id="10d7ae07-0b5a-802a-916f-dee8b1fb0e67" class="">
+</p><h3 id="10c7ae07-0b5a-8094-8729-cd2f626abb54" class=""><mark class="highlight-orange">构建多图对话数据的方式比较有启发性</mark></h3><p id="10c7ae07-0b5a-80c5-a5cf-c806c016b858" class="">使用LLM构建问答对，</p><p id="10c7ae07-0b5a-8080-983d-dd284b039ed4" class="">创建三个agent，分别提问、回答、评价问答对话质量</p><p id="10c7ae07-0b5a-80d1-ab8e-e14667cec94f" class="">（<mark class="highlight-yellow">prompt在附录中给出</mark>）</p><p id="10c7ae07-0b5a-80bc-a066-fb313649a411" class="">同时经过多轮次人工筛选出最终的问答对。</p><p id="10c7ae07-0b5a-802e-a575-c40942d9bcc7" class="">
+</p><p id="10c7ae07-0b5a-80f1-844a-c665643c91a5" class=""><mark class="highlight-red">使用open-ended的评测方式，</mark>评价agent基于原始问答对的信息，对待测试LLM的回答质量进行测评</p><p id="10c7ae07-0b5a-8052-991c-e4d1f75ce63c" class="">经过人工检验，这种测评方式于人工评测的打分一致</p><p id="10c7ae07-0b5a-80a8-9579-d10179bbc687" class="">
+</p><p id="10c7ae07-0b5a-8074-9aa9-ec80a1f4cd3e" class="">这篇文章还提出了相关的微调指令集</p><p id="10c7ae07-0b5a-80f6-82ee-f68d5a295829" class="">
+</p><p id="10c7ae07-0b5a-80ef-a72b-e1cb362294b2" class="">
+</p><p id="10c7ae07-0b5a-8037-9842-d2c4474936b1" class="">
+</p><p id="10c7ae07-0b5a-80c7-abc0-decc0a59bdce" class="">
+</p><p id="10d7ae07-0b5a-8028-b402-c9f68259352a" class="">
+</p><h2 id="10c7ae07-0b5a-8071-a63e-d40b8dc9a560" class="">最重要↓</h2><h2 id="10c7ae07-0b5a-80b6-82a0-d7bc753ce9fd" class=""><mark class="highlight-red">Mantis:</mark> Interleaved multi-image instruction tuning. <em>arXiv preprint arXiv:2405.01483</em>, 2024：</h2><p id="10d7ae07-0b5a-805d-8344-daff09825e85" class=""><a href="https://arxiv.org/abs/2405.01483">https://arxiv.org/abs/2405.01483</a></p><p id="10c7ae07-0b5a-8055-9f16-c8d5494d4a8e" class=""><strong>微调指令集Mantis-Instruct，规模721K</strong></p><p id="10d7ae07-0b5a-807e-9a31-e9f3d5204ecb" class="">
+</p><p id="10d7ae07-0b5a-80a2-8847-e3703af66a3a" class="">下面为huggingface上其数据集来源</p><p id="10c7ae07-0b5a-80ff-9fff-e630d2c1c2c8" class=""><a href="https://huggingface.co/datasets/TIGER-Lab/Mantis-Instruct/viewer/visual_story_telling/train?p=66">TIGER-Lab/Mantis-Instruct · Datasets at Hugging Face</a></p><p id="10c7ae07-0b5a-8092-b749-f0e72657b15e" class="">
+</p><figure id="10d7ae07-0b5a-80cf-ae08-e4d99aadb6a7" class="image"><a href="%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%2010c7ae070b5a80df8922dbfc59e6e6ae/1727357788887.png"><img style="width:707.9896240234375px" src="%E7%9B%B8%E5%85%B3%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%2010c7ae070b5a80df8922dbfc59e6e6ae/1727357788887.png"/></a></figure><p id="10c7ae07-0b5a-80b1-964a-c8f40e41590b" class="">
+</p><p id="10c7ae07-0b5a-8059-b263-d2baaa8548c5" class="">
+</p><h2 id="10c7ae07-0b5a-804a-802f-e71c56401b33" class=""><mark class="highlight-red">LLaVA-NeXT-Interleave:</mark> Tackling Multi-image, Video, and 3D in Large Multimodal Models——LLaVA-NeXT-Interleave, which simultaneously tack les Multi-image, Multi-frame (video), Multi-view (3D), and Multi-patch (single-image) scenarios in LMMs：</h2><p id="10d7ae07-0b5a-80c1-9847-dcb542410257" class=""><a href="https://arxiv.org/abs/2407.07895">https://arxiv.org/abs/2407.07895</a></p><p id="10c7ae07-0b5a-8026-8499-e0e01d6003c1" class="">提出了图文交错格式数据集<strong>M4-Instruct：规模1177.6K</strong></p><p id="10c7ae07-0b5a-8079-a34f-e22381c5749d" class="">
+</p><p id="10c7ae07-0b5a-8042-a152-f51a63423df0" class="">
+</p><p id="10c7ae07-0b5a-80d3-aa38-cd0cefa1869a" class="">
+</p><p id="10c7ae07-0b5a-80ef-9c2a-f41281b6fbda" class="">
+</p><p id="10c7ae07-0b5a-8023-8a70-e9a0cbcf05b5" class="">
+</p><p id="10c7ae07-0b5a-80f6-b6d3-ed0a8cc0f905" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

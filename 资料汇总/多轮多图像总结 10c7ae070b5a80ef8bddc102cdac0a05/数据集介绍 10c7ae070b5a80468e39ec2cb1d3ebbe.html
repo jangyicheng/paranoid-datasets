@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>数据集介绍</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="10c7ae07-0b5a-8046-8e39-ec2cb1d3ebbe" class="page sans"><header><h1 class="page-title">数据集介绍</h1><p class="page-description"></p></header><div class="page-body"><p id="10d7ae07-0b5a-80f5-898e-ebbceb1cd036" class="">
+</p><p id="10d7ae07-0b5a-80d7-a86c-e613cf5be01d" class="">下面大部分数据集均来自huggingface，部分来自<a href="https://huggingface.co/datasets/TIGER-Lab/Mantis-Instruct/viewer/visual_story_telling/train?p=66">https://huggingface.co/datasets/TIGER-Lab/Mantis-Instruct/viewer/visual_story_telling/train?p=66</a></p><table id="10c7ae07-0b5a-809c-89dc-c288794ed442" class="simple-table"><tbody><tr id="10c7ae07-0b5a-8066-8465-cf6ef62e1376"><td id="u|HL" class="">数据集名称</td><td id="u;xi" class="">数据集描述</td><td id="HYej" class="">备注</td></tr><tr id="10c7ae07-0b5a-80d5-927c-c49be82c11d3"><td id="u|HL" class=""><strong>基础任务：现实世界</strong></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-80fa-bd9f-d089f47f43f8"><td id="u|HL" class="">COCO</td><td id="u;xi" class="">经典数据集——物品理解</td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-8075-b53a-e17f3ba97320"><td id="u|HL" class="">WIKI数据集</td><td id="u;xi" class="">无标签，摘自WIKI的数据集</td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-806f-97b9-e66b320617b6"><td id="u|HL" class="">Animal Image Dataset</td><td id="u;xi" class="">90种动物的数据集</td><td id="HYej" class="">学习动物种类以及同种动物不同形象的理解</td></tr><tr id="10c7ae07-0b5a-807c-9722-cea3651db3b1"><td id="u|HL" class="">RESISC45</td><td id="u;xi" class="">遥感地面图像</td><td id="HYej" class="">遥感地面/宏观世界理解</td></tr><tr id="10c7ae07-0b5a-808f-ab2a-d8e711c174c3"><td id="u|HL" class="">food101</td><td id="u;xi" class="">食物数据集</td><td id="HYej" class="">同一食物不同视角、状态</td></tr><tr id="10c7ae07-0b5a-8093-ba7b-c809fbd47bb5"><td id="u|HL" class="">Office-Home Dataset</td><td id="u;xi" class="">Artistic images, Clip Art, Product images and Real-World images，共65种</td><td id="HYej" class="">学习同一物品的多种形式的理解</td></tr><tr id="10c7ae07-0b5a-8078-8b38-fa44509d80db"><td id="u|HL" class="">WikiArt</td><td id="u;xi" class="">艺术影印数据集</td><td id="HYej" class="">艺术风格差异理解</td></tr><tr id="10c7ae07-0b5a-808f-b879-ebeaea54bcbe"><td id="u|HL" class=""><strong>抽象逻辑理解、学习</strong></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-80fd-8355-c0985d6bb7c5"><td id="u|HL" class="">VASR</td><td id="u;xi" class="">Visual Analogies of Situation Recognition</td><td id="HYej" class="">对给定动作概念的理解</td></tr><tr id="10c7ae07-0b5a-8071-b9cf-d3906544a93f"><td id="u|HL" class="">MAGICBRUSH</td><td id="u;xi" class="">场景细微差距理解</td><td id="HYej" class="">细粒度差别理解</td></tr><tr id="10c7ae07-0b5a-809e-9f5e-d07196ff867a"><td id="u|HL" class="">NaturalBench</td><td id="u;xi" class="">场景细微差距理解</td><td id="HYej" class="">细粒度差别理解</td></tr><tr id="10c7ae07-0b5a-805d-be79-f3603b44e0ee"><td id="u|HL" class=""><strong>关联性任务</strong>：<strong>连续文档、网页类别</strong></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-80e0-b565-dd5b23cc4e4b"><td id="u|HL" class="">OCR-VQA</td><td id="u;xi" class="">书籍封面图片数据集</td><td id="HYej" class="">书籍封面对比、成对</td></tr><tr id="10c7ae07-0b5a-806d-a0ac-f2285b7ec648"><td id="u|HL" class="">MIND2WEB</td><td id="u;xi" class="">连续网页数据集</td><td id="HYej" class="">连续网页间内容关系理解</td></tr><tr id="10c7ae07-0b5a-80dc-8770-e0a879d87165"><td id="u|HL" class="">SCREENQA</td><td id="u;xi" class="">屏幕截图数据集</td><td id="HYej" class="">屏幕内容间对比理解</td></tr><tr id="10c7ae07-0b5a-8031-ba03-e0fe26902e77"><td id="u|HL" class="">DOCVQA</td><td id="u;xi" class="">手写、印刷文档影印数据集</td><td id="HYej" class="">多图间交错信息引用理解、已经分组完毕</td></tr><tr id="10c7ae07-0b5a-80d6-b801-ef0f0e041fc2"><td id="u|HL" class="">ChartQA</td><td id="u;xi" class="">图表数据集</td><td id="HYej" class="">图表识别、交叉比较、引用理解</td></tr><tr id="10c7ae07-0b5a-809b-9f28-f1fa26b4b3e2"><td id="u|HL" class=""><strong>连续空间、时态理解</strong></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-80d3-91d1-c8d5e799c05e"><td id="u|HL" class="">ALFRED</td><td id="u;xi" class="">3D场景数据集</td><td id="HYej" class="">对连续空间和连续动作的理解</td></tr><tr id="10c7ae07-0b5a-80c0-9b6e-cc2c13e07561"><td id="u|HL" class="">COMICS_Dialogue</td><td id="u;xi" class="">漫画图片数据集</td><td id="HYej" class="">漫画情节理解、漫画人物心理理解</td></tr><tr id="10c7ae07-0b5a-806d-8acb-cb8a5024fad9"><td id="u|HL" class="">NEXT-QA</td><td id="u;xi" class="">连续动作、时序理解</td><td id="HYej" class="">动作顺序、时态理解</td></tr><tr id="10c7ae07-0b5a-805e-89a7-f9d8cb098378"><td id="u|HL" class=""><strong>补充知识：学术内容理解</strong></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr><tr id="10c7ae07-0b5a-8026-a5ef-e5ced4a39ac0"><td id="u|HL" class="">Lecturebank</td><td id="u;xi" class="">1,352个在线讲座文件，涵盖60门课程，5个领域（nlp、ml、ai、dl、ir）</td><td id="HYej" class="">AIscience信息理解，更重要的是slide的上下文关系理解</td></tr><tr id="10c7ae07-0b5a-80d5-aa7b-db01e5e94f94"><td id="u|HL" class="">SCIENCEQA</td><td id="u;xi" class="">科学图片集</td><td id="HYej" class="">科学信息理解</td></tr><tr id="10c7ae07-0b5a-8087-8783-ed5b3f4ab5e2"><td id="u|HL" class="">AI2D</td><td id="u;xi" class="">包含1000种共5000个英语图表的多模态语料库</td><td id="HYej" class="">学术图表理解，kaggle上有此数据集完整版</td></tr><tr id="10c7ae07-0b5a-8057-9f82-fa1a5bf76a3d"><td id="u|HL" class="">PubMed</td><td id="u;xi" class="">医疗数据集，共129万张，20个类别，覆盖身体每个部位各种影像</td><td id="HYej" class="">医疗信息学习，交叉比较理解</td></tr><tr id="10c7ae07-0b5a-80a2-bb56-d0a9473ecdc6"><td id="u|HL" class="">OmniMedVQA</td><td id="u;xi" class="">备用医疗数据集，10个G，十万张各个身体部位图</td><td id="HYej" class="">由于PubMed已经足够大，估计此数据集用不上</td></tr><tr id="10c7ae07-0b5a-8073-932a-e4665284966b"><td id="u|HL" class="">GEO170K</td><td id="u;xi" class="">平面几何数据集</td><td id="HYej" class="">几何信息理解</td></tr><tr id="10c7ae07-0b5a-8056-b618-c7cb05d50c10"><td id="u|HL" class=""></td><td id="u;xi" class=""></td><td id="HYej" class=""></td></tr></tbody></table><h2 id="10c7ae07-0b5a-8017-8d87-e4dc7704b0dd" class="">后续可以改进的数据集：</h2><p id="10c7ae07-0b5a-80f7-9f27-e4ad5d4958cc" class="">ALFRED：作为3D数据集可能较为单一，可以补充多视角的数据集</p><p id="10c7ae07-0b5a-801b-989f-da34f06c32c0" class="">GEO170K：数学类一直难以构造合适的多图问答，可以补充</p><p id="10c7ae07-0b5a-803e-b48a-ee9439b695a2" class="">Lecturebank：可能内容比较难，有待商榷</p><h2 id="10c7ae07-0b5a-8003-b3bd-e06811835bc1" class="">后续可以补充的数据集：<br/><br/></h2><p id="10c7ae07-0b5a-8098-bc8f-d24a576aaeb1" class="">地理类，如世界地图、城市地图，scienceQA中含有部分，但数量可能不够</p><p id="10c7ae07-0b5a-805c-94d5-ddb033737db0" class="">代码类</p><p id="10c7ae07-0b5a-8030-b426-fee2f2cff6d8" class="">
+</p><p id="10c7ae07-0b5a-8042-821c-d35e06bbe933" class="">
+</p><p id="10c7ae07-0b5a-804e-9d50-d2e298dfa293" class="">
+</p><p id="10c7ae07-0b5a-80eb-86da-ec865f1131f4" class="">
+</p><p id="10c7ae07-0b5a-8060-abce-c98f542e3500" class="">
+</p><h3 id="10c7ae07-0b5a-80f7-a89a-f9450788a4c8" class="">需要辅助信息的数据集：</h3><h3 id="10c7ae07-0b5a-80ef-9131-c22548aabca5" class="">科学类知识的准确回答：<strong>AI2D、Lecturebank，科学类内容较难</strong></h3><h3 id="10c7ae07-0b5a-805a-ae53-d750aaa42476" class="">文档类别的文字识别、理解：<strong>DOCVQA，问题可能细粒度太高，需要信息增强</strong></h3><h3 id="10c7ae07-0b5a-8017-846b-cae3aa886c71" class="">屏幕截图的理解：<strong>SCREENQA、MIND2WEB，理由同上</strong></h3><p id="10c7ae07-0b5a-806e-ad10-fd6500f83f81" class="">上面的数据集需要补充AI辅助信息</p><hr id="10c7ae07-0b5a-8036-b9ed-f041ad43f7ad"/><p id="10c7ae07-0b5a-80fd-b9ed-ed68d1ae4e2f" class="">
+</p><h3 id="10c7ae07-0b5a-802f-a693-ff6cc485c3bf" class="">图表类别的识别、定量分析：<strong>ChartQA，数据集中已经自带csv格式的备注</strong></h3><h3 id="10c7ae07-0b5a-80ea-89f7-ec786ec3a4c3" class="">医疗类别的识别、理解：<strong>PubMed </strong> ，数据集已经自带专家标注的辅助信息</h3><h3 id="10c7ae07-0b5a-80d7-b761-e7e38b9fd77a" class="">数学类型的内容理解：Geo107k，数据集中已经给出单图问答</h3><p id="10d7ae07-0b5a-807b-8538-da24787236c3" class="">
+</p><p id="10d7ae07-0b5a-80e5-8161-d0b0125bd528" class="">
+</p><p id="10d7ae07-0b5a-8094-b82f-fa1c2c4919b7" class="">
+</p><p id="10d7ae07-0b5a-80a2-994e-e07bef3d82c8" class="">
+</p><p id="10d7ae07-0b5a-80dc-bc8d-d4d0d100d729" class="">注意有些数据集因为细粒度较高，故不能进行缩放；</p><p id="10d7ae07-0b5a-80d8-a765-f2dbdd001fe5" class="">同时需要辅助信息</p><table id="10d7ae07-0b5a-80e1-9d78-e1dce276d27f" class="simple-table"><tbody><tr id="10d7ae07-0b5a-8046-bcc0-eabb659f385e"><td id="LW~=" class="">项目名称</td><td id="hbRg" class="">是否缩放</td><td id="]mG|" class="">AI辅助信息</td></tr><tr id="10d7ae07-0b5a-80b8-8ead-f7ba09d53754"><td id="LW~=" class="">CHART_QA</td><td id="hbRg" class="">否</td><td id="]mG|" class="">可以使用自带辅助信息</td></tr><tr id="10d7ae07-0b5a-8057-9c90-ce4150c79558"><td id="LW~=" class="">AI2D</td><td id="hbRg" class="">是</td><td id="]mG|" class="">待定</td></tr><tr id="10d7ae07-0b5a-802b-83af-ed5cae783bb0"><td id="LW~=" class="">DOCVQA</td><td id="hbRg" class="">否</td><td id="]mG|" class="">有</td></tr><tr id="10d7ae07-0b5a-80db-87d7-ccaf6de019d5"><td id="LW~=" class="">SCREENQA</td><td id="hbRg" class="">否</td><td id="]mG|" class="">有</td></tr><tr id="10d7ae07-0b5a-80b3-b612-d77c5bb43bec"><td id="LW~=" class="">MIND2WEB</td><td id="hbRg" class="">否</td><td id="]mG|" class="">有</td></tr><tr id="10d7ae07-0b5a-8039-bfc7-cc73b0e4a3b8"><td id="LW~=" class="">LECTUREBANK</td><td id="hbRg" class="">否</td><td id="]mG|" class="">有</td></tr></tbody></table><p id="10d7ae07-0b5a-8014-8b08-db919329a7a2" class="">
+</p><p id="10d7ae07-0b5a-80d0-92f5-e350e531bacf" class="">
+</p><p id="10d7ae07-0b5a-80ca-9e3b-e3cc13206792" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

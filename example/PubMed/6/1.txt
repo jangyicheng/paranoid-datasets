@@ -1,0 +1,2 @@
+human: Please describe this picture.
+gpt: The image depicts a sagittal plane CT scan of a patient's wrist, focusing on the distal radius. It shows the measurement of the volar inclination angle, which is marked at 5.20°, potentially indicating an abnormal alignment. The standard angle should generally be closer to 11°. Two reference lines have been drawn along the distal radius to illustrate this angle. The distal end of the radius appears slightly shifted, suggesting a malalignment which could be related to a recent fracture or other deformation.

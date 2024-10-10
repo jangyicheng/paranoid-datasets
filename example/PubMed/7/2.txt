@@ -1,0 +1,2 @@
+human: What is this photo about?
+gpt: The image shows three CT scan 3D reconstructions of the right scapula. The reconstructions reveal the presence of a bony exostosis, which is an abnormal bony growth, along the medial border on the ventral (anterior) surface of the right scapula. The exostosis appears as a protrusion or outgrowth of bone on the scapula. The CT scans provide detailed imaging of the bony structures and abnormalities within the right shoulder region.

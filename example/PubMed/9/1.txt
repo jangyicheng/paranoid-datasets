@@ -1,0 +1,2 @@
+human: Please describe this picture.
+gpt: The image shows a magnetic resonance imaging (MRI) scan of the shoulder region. The scan reveals a 35 x 15 mm solid mass within the right deltoid muscle. The mass appears as a well-defined, round structure with distinct boundaries. The surrounding muscle tissues and anatomical structures are visible, but the focus of the image is on the presence and characteristics of the intramuscular mass.

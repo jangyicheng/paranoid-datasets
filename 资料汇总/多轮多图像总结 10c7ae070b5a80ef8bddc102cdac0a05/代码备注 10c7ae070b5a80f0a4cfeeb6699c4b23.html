@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>代码备注</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="10c7ae07-0b5a-80f0-a4cf-eeb6699c4b23" class="page sans"><header><h1 class="page-title">代码备注</h1><p class="page-description"></p></header><div class="page-body"><p id="10c7ae07-0b5a-80df-9bd3-db79fe00fc2c" class="">
+</p><p id="10d7ae07-0b5a-8093-9ccf-c3d772279e6e" class="">各个函数的参数文档均以代码中注释形式写在代码文件中，这里仅提供一个全局的思路</p><p id="10d7ae07-0b5a-80d3-b073-e33fe9a54eb3" class="">
+</p><p id="10d7ae07-0b5a-8086-ad8a-e78680f8b534" class="">
+</p><p id="10d7ae07-0b5a-802d-8601-ccb9f01a98ae" class="">workflow：</p><p id="10d7ae07-0b5a-8096-ad4d-c1c9fe36be83" class="">ProcessDataset→utils(save_json)→data_Builder</p><p id="10d7ae07-0b5a-8035-b412-de3a39749752" class="">1.先处理数据集，形成如下格式：</p><p id="10d7ae07-0b5a-802b-98f2-fdd5ddcedb21" class="">某一类图像的根目录root——子文件夹（编号为1、2、3….)——图片（编号为1、2、3…+后缀名）</p><p id="10d7ae07-0b5a-80be-9051-c19bfc90922f" class="">具体见multi-img-multi-turn文件夹中示例</p><p id="10d7ae07-0b5a-805a-ba87-f1fc7468573d" class="">2.使用utils.py中save_json函数给对应root生成image_and_texts.json，记录每一组的图片路径和图片备注信息</p><p id="10d7ae07-0b5a-80f7-85c5-d0950a59292e" class="">3.使用data_Builder中generate…answer函数读取image_and_texts.json，生成问答对，以json格式存入每一子文件夹下</p><p id="10d7ae07-0b5a-806d-bcc2-fe5e26fc2625" class="">
+</p><hr id="10c7ae07-0b5a-8015-a20e-d2792c647a3d"/><p id="10d7ae07-0b5a-802f-a7b1-f78a6db63e90" class="">
+</p><p id="10c7ae07-0b5a-8056-8f97-f8d50f034e60" class="">data_Builder.py为核心代码</p><p id="10d7ae07-0b5a-80b6-aaea-e85dd47d8985" class=""><code>get_response</code>用于和API交互，输入为system级别prompt，用户级别message，以及输入图片的文件路径。返回API的回复结果，以及耗费token数</p><p id="10d7ae07-0b5a-8087-8548-fb722e6b28eb" class=""><br/><br/><code>single_turn_generate_questions_and_answers</code>用于对给定目录对应的image_and_texts.json文件生成问答对，并存入json文件下</p><p id="10d7ae07-0b5a-809f-8637-da8533c0b429" class="">每一轮具体流程如下：</p><p id="10d7ae07-0b5a-802f-8098-c41474ed9fbb" class="">1.读取文件，获得图片路径以及其辅助信息</p><p id="10d7ae07-0b5a-802a-88a1-fffe58193c70" class="">2.提问Agent一次性提出所有问题（如果要求轮次较大，则需多次提问），其中问题前面带有形如[QUESTION_TYPE]的标签表示问题类型，并记录出现过的所有问题类型（防止出现重复）</p><p id="10d7ae07-0b5a-8048-bf96-f4cdf9c91007" class="">3.对所有问题按引用图片序号大小进行排序，按序号越大的图片越晚提问的原则（有助于节省token，并符合自然对话规律）</p><p id="10d7ae07-0b5a-80ff-815c-d11fd2710980" class="">4.回答Agent多轮回复所有问题，每次按标签仅输入问题所涉及到的图片</p><p id="10d7ae07-0b5a-80b2-8a11-c30d62d250cc" class="">5.随机抽取一（多）个问答对产生深入问题，并插入到该问答下一位置</p><p id="10d7ae07-0b5a-8031-bfd9-e06f603feeca" class="">6.存储完整对话历史，每一图片输入轮次，花费token数</p><p id="10d7ae07-0b5a-80ea-97e1-e419a95adf22" class=""><br/><br/><code>multi_turn_generate_questions_and_answers</code> 基本同上，但由于耗费过大已经废弃</p><p id="10d7ae07-0b5a-80c3-b7ad-fb44e0ff19d6" class="">区别在于，是一问一答交替产生</p><hr id="10d7ae07-0b5a-8091-9c85-e13448f84a5d"/><p id="10d7ae07-0b5a-80b8-8d2f-cda680eb6aa5" class="">
+</p><p id="10d7ae07-0b5a-8064-b1b7-e0b9921690ec" class="">ProcessDataset.py<br/><br/><code>Process</code>  选择不同数据集的parquet（或其他文件），进行<mark class="highlight-yellow">预处理</mark></p><p id="10d7ae07-0b5a-80a2-a15f-c4369d1ba73e" class="">得到完整格式的数据，即</p><p id="10d7ae07-0b5a-8032-8c60-fd4c6a2a1a94" class="">某一类图像的根目录root——子文件夹（编号为1、2、3….)——图片（编号为1、2、3…+后缀名）</p><p id="10d7ae07-0b5a-80d6-95ed-d7d4b7118e7c" class="">Process（‘type’）表示预处理type类型的数据集</p><p id="10d7ae07-0b5a-8009-9252-c0f95c5d4610" class="">
+</p><hr id="10d7ae07-0b5a-8069-9363-fbc624a30180"/><p id="10d7ae07-0b5a-8058-bb0b-d99ec083839c" class="">
+</p><p id="10d7ae07-0b5a-80d1-afd2-c16d9df95f8a" class="">prompt.py<br/><br/><code>QuestionPrompt，AnswerPrompt</code></p><p id="10d7ae07-0b5a-8077-9633-eed439b8338a" class="">分别为提问和回答的agent所需的两种Prompt，还可以根据数据集类别选择对应的prompt</p><p id="10d7ae07-0b5a-8021-9b18-e77c679ad88c" class="">使用方式：</p><p id="10d7ae07-0b5a-80ea-9266-d6f353287857" class="">QPrompt=QuestionPrompt()#实例化</p><p id="10d7ae07-0b5a-809e-844e-d70fd141ca7c" class="">prompt=QPrompt.type(’doc’)#选择具体任务类型，这里是doc类型</p><hr id="10d7ae07-0b5a-806c-b2fc-efbb4ce51687"/><p id="10d7ae07-0b5a-80cc-a81c-d69d5e1a2907" class="">
+</p><p id="10d7ae07-0b5a-805f-bc0c-dbf844c34919" class="">utils.py存放工具函数的文件</p><p id="10d7ae07-0b5a-807b-8509-ed71157e80ff" class="">重要函数：<br/><br/><code>save_to_json</code></p><p id="10d7ae07-0b5a-80cd-8d19-ca3da37aee30" class="">对于给定目录下指定<mark class="highlight-yellow">预处理</mark>后的文件夹进行处理</p><p id="10d7ae07-0b5a-807e-95f6-ff88f0f4eb9b" class="">并进行图片缩放、利用chatgpt进行信息增强等操作</p><p id="10d7ae07-0b5a-80d0-b418-d84d0037d6c6" class="">得到每一root文件夹所对应的完整格式的图文信息json文件：</p><p id="10d7ae07-0b5a-801a-98fb-e87664db79fc" class="">
+</p><ol type="1" id="10d7ae07-0b5a-8074-8176-efe883d1ef2c" class="numbered-list" start="1"><li>遍历给定root文件夹下所有文件夹，对于文件夹遍历其所有图片</li></ol><ol type="1" id="10d7ae07-0b5a-8033-bf48-ed64fe06f062" class="numbered-list" start="2"><li>若resize参数为True，则对每张图片进行缩放至512*512大小以下</li></ol><ol type="1" id="10d7ae07-0b5a-80b3-af2b-d64913a2b460" class="numbered-list" start="3"><li>若满足<code>support_info</code> 为True，即调用API生成辅助信息txt格式；若<code>regenerate_depict</code> 为True，则重新生成覆盖此前生成的辅助信息</li></ol><ol type="1" id="10d7ae07-0b5a-8025-b636-efdc1d2a1936" class="numbered-list" start="4"><li>将辅助信息和图片路径均添加至json文件中</li></ol><p id="10d7ae07-0b5a-80ec-ac30-d3ea74d7227f" class="">
+</p><p id="10d7ae07-0b5a-80c2-a34b-f48a6963889c" class="">
+</p><p id="10d7ae07-0b5a-80ee-9bc8-cb2a99024dfc" class="">
+</p><p id="10d7ae07-0b5a-8068-91ea-d1ddf3346735" class="">
+</p><p id="10d7ae07-0b5a-80b1-8d1d-cf53104e219d" class="">下面链接给出对于不同数据集其应该使用参数的情况</p><p id="10d7ae07-0b5a-8006-b5c8-db27452c06ee" class=""> </p><p id="10d7ae07-0b5a-80d7-9086-d988e977d2e4" class="">
+</p><p id="10d7ae07-0b5a-802c-84bc-e8d76f2aa592" class="">下面是一些无关紧要的工具函数：<br/><br/><code>reorder_images_in_directory</code><br/>对给定文件夹下所有图片按1、2、3…+后缀名的格式进行重命名<br/><br/><code>rename_folders_in_sequence</code></p><p id="10d7ae07-0b5a-804f-a41b-da11a0d04837" class="">对所有文件夹进行重命名（与缩放图片函数配合使用）<br/><br/><code>divide_images_into_subfolders</code><br/>将指定目录下所有图片按N张一组划分，分到不同的子文件夹下<br/><br/><code>shuffle_folders_in_range</code></p><p id="10d7ae07-0b5a-80e7-9b01-fd38db240b5d" class="">随机打乱给定root下的所有文件夹，并能够保证文件夹名称仍按顺序排列<br/><br/><code>count_images_in_directory</code></p><p id="10d7ae07-0b5a-8082-8742-ff5a62e19146" class="">计算并可视化每一子文件夹中图片数量是否合适，用于检验预处理结果</p><p id="10d7ae07-0b5a-8008-839d-ee03da1f857d" class="">
+</p><p id="10d7ae07-0b5a-808f-914b-fb4ae4d2e2ad" class="">
+</p><p id="10d7ae07-0b5a-8035-89d1-e465297e1c2c" class="">imgcluster.py,textcluster.py（基本没用这两个文件）</p><p id="10d7ae07-0b5a-80dd-a599-c78146cc3e1b" class="">分别是对于给定数据集中图片聚类，和按对应文本进行聚类，并根据聚类结果</p><p id="10d7ae07-0b5a-808c-9dc3-f441c24d245f" class="">生成合适的数据集格式</p><p id="10d7ae07-0b5a-80c0-a34d-e8e5d05bd208" class="">
+</p><p id="10d7ae07-0b5a-80f8-b9da-d1015007f5ec" class="">
+</p><p id="10d7ae07-0b5a-8016-a7de-f7db449ee148" class="">examine.py<br/><br/><code>process_json</code>    对于  data_Builder生成的conversation.json文件，提取其中问题和待评测LLM交互，生成LLM的对话数据集，以json格式输出</p><p id="10d7ae07-0b5a-80a0-81c9-e6c7d0b6dd83" class="">
+</p><p id="10d7ae07-0b5a-806f-860e-ff753929035d" class="">
+</p><p id="10d7ae07-0b5a-80d6-8b0e-fb3364c4eb70" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
