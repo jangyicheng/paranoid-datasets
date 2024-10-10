@@ -5,9 +5,7 @@ import os
 from openai import OpenAI
 from tqdm import tqdm
 
-# api_key = ""
-# organization = ""
-# client=OpenAI(api_key= "",organization="")
+
 
 
 def get_response(prompt=" ", model="gpt-4o", max_tokens=1024, temperature=0.2, message=None, images=None,
