@@ -11,9 +11,9 @@ from tqdm import tqdm
 from prompt import QuestionPrompt, AnswerPrompt,EvaluatePrompt
 
 #初始化API
-api_key = ""
-organization = ""
-client=OpenAI(api_key= "",organization="")
+# api_key = ""
+# organization = ""
+# client=OpenAI(api_key= "",organization="")
 
 
 """
